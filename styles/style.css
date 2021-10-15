@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* 
+
+
+
+- Violet: hsl(257, 40%, 49%)
+- Soft Magenta: hsl(300, 69%, 71%)
+
+*/
+:root {
+  --clr-main: hsl(0, 0%, 100%);
+  --clr-primary: hsl(300, 69%, 71%);
+  --clr-secondary: hsl(257, 40%, 49%);
+
+  --clr-hover-icon: hsl(302, 71%, 52%);
+}
+
+/*=============================================
+=                Global Styles                =
+=============================================*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: var(--clr-secondary);
+
+  font-weight: 400;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+
+  font-size: 0.9em;
+}
+/*=====  End of Global Styles  ======*/
+.container {
+  background: var(--clr-secondary) url('../images/bg-mobile.svg') no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.heading {
+  width: 100%;
+  padding: 2em 2em 3.7em;
+  display: flex;
+  align-items: flex-start;
+}
+
+.logo {
+  width: 125px;
+}
+
+.img-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 2.2em;
+  margin-bottom: 3em;
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-inline: 2em;
+  color: var(--clr-main);
+}
+
+.img-container,
+.content {
+  max-width: 440px;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 700;
+
+  margin-bottom: 1em;
+}
+
+.desc {
+  font-size: 1.03em;
+  margin-bottom: 2em;
+  opacity: 0.8;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+}
+
+.btn {
+  background: var(--clr-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 0.6em;
+  width: 200px;
+  border-radius: 50px;
+  color: var(--clr-secondary);
+
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s linear;
+}
+
+.btn:hover {
+  background: var(--clr-primary);
+  color: var(--clr-main);
+}
+
+.links-container {
+  margin-top: 3em;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  list-style: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--clr-main);
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.link a {
+  color: var(--clr-main);
+  transition: all 0.2s linear;
+}
+
+.link:hover {
+  border-color: var(--clr-hover-icon);
+}
+
+.link:hover a {
+  color: var(--clr-hover-icon);
+}
+
+.attribution {
+  margin-top: 1em;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--clr-main);
+  opacity: 0.8;
+}
+
+@media only screen and (min-width: 376px) {
+  .container {
+    background: var(--clr-secondary) url('../images/bg-desktop.svg') no-repeat;
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 1065px) {
+  .title {
+    font-size: 2.3em;
+  }
+
+  .container {
+    justify-content: space-between;
+  }
+
+  main {
+    flex-direction: row;
+    flex: 1;
+  }
+
+  .img-container {
+    height: 100%;
+    margin: 0;
+  }
+
+  .content {
+    height: 100%;
+    align-items: flex-start;
+    text-align: start;
+  }
+
+  .img-container,
+  .content {
+    max-width: 50%;
+  }
+
+  .links-container {
+    margin-top: 1em;
+    width: 100%;
+    padding-inline: 2em;
+  }
+
+  .links {
+    justify-content: flex-end;
+  }
+
+  .attribution {
+    margin-bottom: 1em;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .logo {
+    width: 200px;
+  }
+}
